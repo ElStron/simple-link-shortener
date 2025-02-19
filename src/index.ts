@@ -3,7 +3,6 @@ import type { Bindings } from './types'
 import { Home } from './pages/Home'
 import { Result } from './components/Result'
 import { createLink } from './services/links'
-import { serveStatic } from 'hono/serve-static'
 
 const app = new Hono<{ Bindings: Bindings }>();
 app.get('/', (c) => {
@@ -16,7 +15,6 @@ app.post('/shorten', async (c) => {
   const host = c.req.url
   const baseURl = new URL("/",host)
   const url = (await c.req.formData()).get('url') as string
-  
   if (!url) {
     return c.html(`
       <p>URL is required</p>
