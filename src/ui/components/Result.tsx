@@ -1,4 +1,3 @@
-import { html } from "hono/html";
 export const Result = ( url: string) => {
     return (
         <div class="w-full max-w-[400px] flex justify-center items-center gap-5 p-5 rounded-[var(--border-radius)] bg-[#ffffff0f]">

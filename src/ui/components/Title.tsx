@@ -1,5 +1,3 @@
-import { css, cx, keyframes, Style } from 'hono/css'
-
 export  const Title = () => {
     return (
         
@@ -9,9 +7,3 @@ export  const Title = () => {
         </h1>
     );
 }
-
-const titleStyle = css`
-    h1>.sub {
-        color: aqua;
-    }
-`
